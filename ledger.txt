@@ -1,0 +1,45 @@
+%Alice has $20.00
+%Bob has $40.00
+%Clara has $120.00
+%Daren has $80.00
+%Erin has $100.00
+%Faith has $60.00
+^
+&Erin pays Clara $50.56
+&Bob pays Daren $40.16
+&Erin pays Clara $137.03
+&Daren pays Faith $142.78
+&Clara pays Daren $133.96
+&Faith pays Erin $75.54
+&Alice pays Bob $20.73
+&Erin pays Alice $27.04
+&Daren pays Clara $190.88
+&Bob pays Daren $192.29
+&Bob pays Erin $19.28
+&Bob pays Daren $131.35
+&Alice pays Clara $90.5
+&Clara pays Bob $48.24
+&Bob pays Alice $86.02
+&Faith pays Daren $129.95
+&Faith pays Clara $138.43
+&Bob pays Faith $54.48
+&Bob pays Faith $193.31
+&Bob pays Daren $58.11
+&Bob pays Clara $95.45
+&Daren pays Clara $86.34
+&Erin pays Faith $76.47
+&Faith pays Alice $28.47
+&Bob pays Faith $111.78
+&Faith pays Daren $172.62
+&Alice pays Faith $184.12
+&Alice pays Erin $107.45
+&Daren pays Faith $50.05
+&Daren pays Alice $185.38
+-=-
+
+Code to generate list of transactions at random for testing example
+
+p = ['Alice', 'Bob', 'Clara', 'Daren', 'Erin', 'Faith']
+for i in range(30):
+    choice = random.sample(p, 2)
+    print('&'+choice[0], 'pays', choice[1], '$'+str(random.randint(1500, 20000)/100))
